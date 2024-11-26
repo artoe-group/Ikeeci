@@ -133,22 +133,6 @@ nav {
   background: white;
 }
 
-/*
-#searchBox {
-  width: 200px;
-  padding: 10px;
-  margin-right: 10px;
-}
-
-#searchResults {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-*/
-
-
 /* styles for navbar when window is scrolled using JavaScript */
 .window-scroll {
   background: var(--color-primary);
@@ -280,6 +264,7 @@ header .container .info .cta a:last-child:hover img {
   filter: saturate(0);
 }
 
+
 /* ============================ COMMERCIALS ======================= */
 section#commercial {
   background: var(--color-primary-variant);
@@ -307,20 +292,6 @@ section#commercial .container {
 section#commercial .container video {
   width: 50%;
 }
-
-/* section#commercial .container .commercial-pictures {
-  margin: 6rem;
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-} */
-
-/* 
-section#commercial .container .commercial-pictures img {
-  margin-top: 8px;
-  vertical-align: middle;
-  height: 11rem;
-} */
 
 
 

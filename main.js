@@ -64,34 +64,3 @@ window.addEventListener("scroll", () => {
   document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
 })
 
-
-// // SEARCH BUTTOn
-// function search() {
-//   // Get the search term from the input box
-//   var searchTerm = document.getElementById("searchBox").value;
-
-//   // Use the DOM to find all elements on the page
-//   var elements = document.getElementsByTagName("*");
-
-//   // Loop through each element and search for the term
-//   var searchResults = "";
-//   for (var i = 0; i < elements.length; i++) {
-//     var element = elements[i];
-//     var elementText = element.innerHTML;
-
-//     // If the element contains the search term, add it to the search results
-//     if (elementText.indexOf(searchTerm) > -1) {
-//       searchResults += "<p>" + elementText + "</p>";
-//     }
-//   }
-
-//   // If no results were found, display a message
-//   if (searchResults == "") {
-//     searchResults = "No results found.";
-//   }
-
-//   // Display the search results
-//   document.getElementById("searchResults").innerHTML = searchResults;
-// }
-
-
