@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEECI - Cart</title>
+
+    <!-- GOOGLE FONTS -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- SWIPER JS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="./images/logo2.png"></a>
+
+            <ul>
+                <li><a href="#" class="active">CART Items</a></li>
+            </ul>
+
+            <div class="icons">
+                <a><i class="uil uil-shopping-basket"></i></a>
+            </div>
+
+            <button id="menu-btn"><i class="uil uil-bars"></i></button>
+        </div>
+    </nav>
+    <!--========================= END OF NAVBAR ========================-->
+  
+    <div id="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be added dynamically using JavaScript -->
+      </ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button id="checkout-button">Checkout</button>
+    </div>
+
+    <script src="cart.js"></script>
+  </body>
+</html>
