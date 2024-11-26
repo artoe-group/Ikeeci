@@ -1,0 +1,40 @@
+
+/* ==================== CART ===================== */
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#cart h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#cart-items li span {
+  margin-left: 10px;
+}
+
+#cart-total {
+  font-weight: bold;
+}
+
+#checkout-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
