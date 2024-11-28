@@ -5,9 +5,8 @@
   --color-dark: #62656a;
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.8);
-
   --width: 84%;
-  --mobile-width: 92%;
+  --mobile-width: 90%;
 }
 
 * {
@@ -228,11 +227,9 @@ header .container .info .cta img {
   opacity: 50%;
 }
 
-
 header .container .info .cta img:hover {
   opacity: 100%;
 }
-
 
 header .container .info .cta a:last-child {
   display: flex;
