@@ -133,20 +133,6 @@ nav {
   background: white;
 }
 
-/* styles for navbar when window is scrolled using JavaScript */
-.window-scroll {
-  background: var(--color-primary);
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-.window-scroll .logo{
-  width: 5rem;
-  content: hide;
-}
-
-.window-scroll a{
-  color: var(--color-white);
-}
 
 nav button {
   display: none;
@@ -222,7 +208,7 @@ header .container .info .delivery i {
 }
 
 header .container .info .delivery {
-color: rgb(106, 106, 106);
+color: rgb(0, 0, 0);
 }
 
 header .container .info p {
@@ -275,7 +261,6 @@ section#commercial {
   left: 0;
   z-index: 10;
   padding: 0;
-  /* display: grid; */
   place-items: center;
   display: none;
 }
@@ -390,29 +375,6 @@ section#why-choose-us .container article a:hover img {
 }
 
 
-/* =================== TESTIMONIALS ================= */
-.swiper {
-  width: var(--width);
-  height: 100%;
-  margin-top: 12rem;
-}
-
-.swiper-wrapper {
-  width: var(--width);
-  margin-bottom: 3rem;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-}
-
-
-.swiper-pagination-bullet {
-  background: var(--color-primary);
-}
-
 /* ========================== FAQS =========================== */
 section#faqs h2 {
   text-align: center;
@@ -525,7 +487,7 @@ footer .container h4 {
 }
 
 footer .container .f1 .logo {
-  width: 13rem;
+  width: 8rem;
 }
 
 footer .container .f1 p {
@@ -596,11 +558,7 @@ footer .copyright {
   border-top: 1px solid var(--color-light);
 }
 
-/*========== MEDIA LESS THAN 13 INCHES - DESIGN SIZE ===============*/
-/* @media screen and (max-width: 1200px) {
-  header .container .info .cta .commercial-pictures {
-    display: none;
-  } */
+
 
 /* ==================== MEDIA QUERIES (TABLETS) ===================== */
 @media screen and (max-width: 1024px) {
@@ -645,7 +603,7 @@ footer .copyright {
   }
 
   nav .container .logo {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
   nav .container ul {
@@ -701,9 +659,6 @@ footer .copyright {
     margin-top: 0;
   }
 
-  /* header .container .info .cta #show-commercial-btn {
-    display: none;
-  } */
 
   /* ================== PRODUCTS ================== */
   section#products .container {
@@ -800,7 +755,6 @@ footer .copyright {
 
   header .container .cta {
     flex-direction: column;
-    /* margin-top: 1.4rem; */
     gap: 1rem;
   }
 
