@@ -203,10 +203,12 @@ header .header-image{
 
 .header-video {
   position: relative;
-  width: 40rem;
+  width: 20rem;
   height: auto;
   overflow: hidden;
   margin-left: 10rem;
+  border-radius: 20px;
+  box-shadow: #00000046;
 }
 
 .header-video video {
