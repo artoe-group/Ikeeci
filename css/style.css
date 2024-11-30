@@ -1282,4 +1282,8 @@ textarea.input100 {
 }
 
 
-
+#products img[src='./images/fireshoes.png'] {
+  margin-bottom: 0; /* Remove any bottom margin */
+  display: block; /* Ensure it's displayed as a block element */
+  max-width: 100%; /* Make sure the image doesn't overflow */
+}
