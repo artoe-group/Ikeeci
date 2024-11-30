@@ -119,6 +119,7 @@ p {
 }
 
 .btn-checkout {
+  padding: 0.6rem 2rem;
   border-radius: 10px;
   background: var(--color-artoe);
   color: var(--color-white);

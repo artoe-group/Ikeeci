@@ -26,6 +26,18 @@
     --item5-filter: blur(40px);
     --item5-zIndex: 7;
     --item5-opacity: 0;
+
+    --color-primary: #000000;
+    --color-primary-variant: #2727271f;
+    --color-black: #0a0a0c;
+    --color-dark: #62656a;
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.8);
+    --width: 84%;
+    --mobile-width: 90%;
+    --color-artoe: #f01a65;
+
+
 }
 
 
@@ -92,14 +104,14 @@
 }
 .carousel .list .item .introduce .des{
     font-size: small;
-    color: #5559;
+    color: rgba(0, 0, 0, 0.6);
 }
 .carousel .list .item .introduce .seeMore{
     font-family: Poppins;
     margin-top: 1.2em;
     padding: 5px 0;
     border: none;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #000000;
     background-color: transparent;
     font-weight: bold;
     letter-spacing: 3px;
@@ -273,15 +285,15 @@
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button{
     font-family: Poppins;
     background-color: transparent;
-    border: 1px solid #5555;
+    border: 1px solid #00ff37;
     margin-left: 5px;
     padding: 5px 10px;
     letter-spacing: 2px;
     font-weight: 500;
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2){
-    background-color: #693EFF;
-    color: #eee;
+    background-color: var(--color-artoe);
+    color: #ffffff;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail  .title,
 .carousel.showDetail .list .item:nth-child(2) .detail  .des,
@@ -299,6 +311,8 @@
 .carousel.showDetail .list .item:nth-child(2) .detail .checkout{
     animation-delay: 1.6s;
 }
+
+
 .arrows{
     position: absolute;
     bottom: 10px;
@@ -416,4 +430,150 @@
 
 
 
+/* CAROUSEL WHITE BG REMOVAL*/
+
+.carousel {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin-top: -50px;
+    background-color: white; /* Ensures the carousel section has a white base */
+}
+
+.carousel::before {
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-image: linear-gradient(70deg, #DC422A, blue);
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    transition: 1s;
+    mix-blend-mode: screen; /* Prevents the blur from darkening the white background */
+}
+
+.carousel.showDetail::before {
+    transform: translate(-100%, -50%) rotate(90deg);
+    filter: blur(130px);
+}
+
+
+
+
+
+
+
+/* Arrows Try Center instead of bottom */
+.arrows {
+    position: relative;
+    width: 100%; /* Ensure arrows span the entire carousel width */
+    height: 100%; /* Match the height of the carousel */
+    display: flex;
+    justify-content: space-between; /* Place the arrows at the left and right edges */
+    align-items: center; /* Center the arrows vertically */
+    pointer-events: none; /* Allows clicks only on the buttons, not the container */
+}
+
+.arrows button {
+    pointer-events: auto; /* Allow button clicks */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.arrows button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+#prev {
+    position: absolute;
+    left: 10px; /* Adjust to fine-tune spacing from the left */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+#next {
+    position: absolute;
+    right: 10px; /* Adjust to fine-tune spacing from the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+#back {
+    position: absolute;
+    bottom: 20px; /* Adjust to fine-tune vertical position */
+    right: 20px; /* Adjust to fine-tune horizontal position */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    color: black; /* Black text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back:hover {
+    background-color: rgba(255, 255, 255, 1); /* Brighter background on hover */
+}
+
+
+/* New Button Modifications for uniform buttons on the acrousel as well */
+/* Updated Button Style for uniform buttons in the carousel */
+.carousel .list .item .introduce .seeMore,
+.carousel.showDetail .list .item:nth-child(2) .checkout button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px; /* Same padding for both buttons */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background: var(--color-black); /* Default black background for the first button */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Both Buttons */
+.carousel .list .item .introduce .seeMore:hover,
+.carousel.showDetail .list .item:nth-child(2) .checkout button:hover {
+    transform: translateY(-2px);
+    background: var(--color-white); /* Hover background turns white */
+    color: var(--color-black); /* Hover text color to black */
+    border: 1px solid var(--color-black); /* Border to black on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* First Button: Add to Cart */
+.carousel.showDetail .list .item:nth-child(2) .checkout button:first-child {
+    background-color: var(--color-black); /* Black background */
+    color: #fff;
+}
+
+/* Second Button: Checkout */
+.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2) {
+    background-color: #E91E63; /* Pink background for the checkout button */
+    color: #fff;
+}
+
+/* Hover Effect for Checkout Button */
+.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2):hover {
+    background-color: var(--color-white); /* Hover background to white */
+    color: #E91E63; /* Hover text color to pink */
+    border-color: #E91E63; /* Hover border color to pink */
+}
 
