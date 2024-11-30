@@ -32,7 +32,7 @@
 /* carousel */
 .carousel{
     position: relative;
-    height: 800px;
+    height: 600px;
     overflow: hidden;
     margin-top: -50px;
 }
