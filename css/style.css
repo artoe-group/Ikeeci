@@ -182,10 +182,11 @@ nav .icons {
 
 
 /* ====================== HEADER ======================= */
+
 header {
-  height: 400px;
+  height: 80vh; /* Responsive height */
   position: relative;
-  top: 10rem;
+  top: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -959,4 +960,180 @@ nav .container ul li a {
 
 nav .container ul li a:hover {
   color: var(--color-primary); /* Optional: Add hover effect */
+}
+
+
+
+/* stacking the header n small screens */
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  /* ====================== HEADER ======================= */
+  header {
+    height: 80vh; /* Responsive height */
+    position: relative;
+    top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on all screens */
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 2rem;
+    margin-top: -3rem;
+  }
+
+  .header-video {
+    position: relative;
+    width: 100%;
+    max-width: 30rem; /* Limit the video size */
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: -30px 20px 20px #00000046;
+    background-color: transparent;
+    margin-bottom: 2rem; /* Space below the video */
+  }
+
+  .header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  header .container .info {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  header .container .info h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive font size */
+    margin-bottom: 1.5rem;
+  }
+
+  header .container .info p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem); /* Responsive font size */
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+    line-height: 1.5;
+  }
+
+  header .container .info .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .container .info .cta a {
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive button size */
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--color-artoe);
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  header .container .info .cta a:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  header {
+    height: 80vh; /* Responsive height */
+    position: relative;
+    top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 2rem;
+    margin-top: -3rem;
+  }
+
+  .header-video {
+    position: relative;
+    width: 100%;
+    max-width: 30rem; /* Limit the video size */
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: -30px 20px 20px #00000046;
+    background-color: transparent;
+    margin-bottom: 2rem; /* Space below the video */
+  }
+
+  .header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  header .container .info {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  header .container .info h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: clamp(4rem, 8vw, 8rem); /* Responsive font size */
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    font-weight: 900;
+    background-image: url('/images/Done.png');
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text; /* Ensures compatibility with Webkit browsers */
+    margin-bottom: 2rem; /* Adds spacing below the title */
+  }
+
+  header .container .info p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem); /* Responsive font size */
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+    line-height: 1.5;
+  }
+
+  header .container .info .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .container .info .cta a {
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive button size */
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--color-artoe);
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+
+  header .container .info .cta a:hover {
+    background-color: var(--color-primary-dark);
+  }
 }
