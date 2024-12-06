@@ -1,47 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".gallery-item");
-  const overlay = document.querySelector(".image-overlay");
-  const overlayTitle = document.querySelector(".image-title");
-  const overlayDescription = document.querySelector(".image-description");
-
   let currentIndex = 0;
-  let slideshowInterval;
 
+  // Helper Function: Activate and Deactivate Images
+  const updateImages = (index) => {
+    items.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("active");
+        item.classList.remove("inactive");
+      } else {
+        item.classList.remove("active");
+        item.classList.add("inactive");
+      }
+    });
+  };
+
+  // Slideshow Logic
   const startSlideshow = () => {
-    slideshowInterval = setInterval(() => {
-      items.forEach((item) => item.classList.remove("active"));
-      currentIndex = (currentIndex + 1) % items.length;
-      items[currentIndex].classList.add("active");
-    }, 2000);
+    updateImages(currentIndex);
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % items.length; // Loop back to first image
+      updateImages(currentIndex);
+    }, 2000); // Match interval timing with CSS transition duration
   };
 
-  const stopSlideshow = () => clearInterval(slideshowInterval);
-
-  const openOverlay = (item) => {
-    stopSlideshow();
-    const title = item.dataset.title;
-    const description = item.dataset.description;
-    overlayTitle.textContent = title;
-    overlayDescription.textContent = description;
-    overlay.classList.add("active");
-  };
-
-  const closeOverlay = () => {
-    overlay.classList.remove("active");
-    startSlideshow();
-  };
-
-  // Initialize slideshow
+  // Start Slideshow
   startSlideshow();
-
-  // Click on gallery items
-  items.forEach((item) =>
-    item.addEventListener("click", () => {
-      openOverlay(item);
-    })
-  );
-
-  // Close overlay on click outside or scroll
-  overlay.addEventListener("click", closeOverlay);
-  window.addEventListener("scroll", closeOverlay);
 });
+
