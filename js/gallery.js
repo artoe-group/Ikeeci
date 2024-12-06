@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => {
       currentIndex = (currentIndex + 1) % items.length; // Loop back to first image
       updateImages(currentIndex);
-    }, 2000); // Match interval timing with CSS transition duration
+    }, 3000); // Match interval timing with CSS transition duration
   };
 
   // Start Slideshow
   startSlideshow();
 });
-
