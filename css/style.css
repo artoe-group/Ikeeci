@@ -571,8 +571,7 @@ footer .copyright {
   }
 
   p {
-    line-height: 1.6rem;
-    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 
   .container {
@@ -630,6 +629,9 @@ footer .copyright {
   }
 
   nav button#close-btn {
+    display: none;
+  }
+  nav .btn-checkout {
     display: none;
   }
 
