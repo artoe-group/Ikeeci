@@ -1,29 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".gallery-item");
-  let currentIndex = 0;
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-  // Helper Function: Activate and Deactivate Images
-  const updateImages = (index) => {
-    items.forEach((item, i) => {
-      if (i === index) {
-        item.classList.add("active");
-        item.classList.remove("inactive");
-      } else {
-        item.classList.remove("active");
-        item.classList.add("inactive");
-      }
-    });
-  };
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
 
-  // Slideshow Logic
-  const startSlideshow = () => {
-    updateImages(currentIndex);
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % items.length; // Loop back to first image
-      updateImages(currentIndex);
-    }, 3000); // Match interval timing with CSS transition duration
-  };
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+    setPositionThumbnail();
 
-  // Start Slideshow
-  startSlideshow();
-});
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+function setPositionThumbnail () {
+    let thumbnailActive = document.querySelector('.thumbnail .item.active');
+    let rect = thumbnailActive.getBoundingClientRect();
+    if (rect.left < 0 || rect.right > window.innerWidth) {
+        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})

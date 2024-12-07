@@ -54,52 +54,6 @@
             </div>
         </div>
     </header>
-
-    <!-- This is for the sample Video -->
-    <section id="commercial">
-        <div class="container">
-            <video controls autoplay>
-                <source src="./images/kobe.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-
-    <section class="gallery">
-        <div class="gallery-container">
-          <div class="gallery-item">
-            <img src="./slides/image1.jpeg" alt="Slide 1">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image2.jpeg" alt="Slide 2">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image3.jpeg" alt="Slide 3">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image4.jpeg" alt="Slide 4">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image5.jpeg" alt="Slide 5">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image6.jpeg" alt="Slide 6">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image6.jpeg" alt="Slide 7">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image6.jpeg" alt="Slide 8">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image6.jpeg" alt="Slide 9">
-          </div>
-          <div class="gallery-item">
-            <img src="./slides/image6.jpeg" alt="Slide 10">
-          </div>
-        </div>
-      </section>
-      
-    <!--======================== END OF COMMERCIAL ============================-->
     <section id="products">
         <div class="container">
             <H2>Our Customized Products</H2>
@@ -261,23 +215,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/gallery.js"></script>
 
-
-    <script>
-        // open video
-        const showCommercialBtn = document.querySelector("#show-commercial-btn");
-        const commercial = document.querySelector("#commercial");
-        showCommercialBtn.addEventListener('click', () => {
-            commercial.style.display = "grid";
-        });
-
-        // close video
-        document.body.addEventListener('click', (e) => {
-            if(e.target.id === "commercial") {
-                commercial.style.display = "none";
-            }
-        })
-
-    </script>
 </body>
 </html>
 

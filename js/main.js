@@ -3,26 +3,38 @@ const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const menu = document.querySelector("nav .container ul");
 
+// Function to check if in mobile view
+const isMobile = () => window.innerWidth <= 768;
+
 // open sidebar
 menuBtn.addEventListener('click', () => {
-  menu.style.display = 'block';
-  menuBtn.style.display = 'none';
-  closeBtn.style.display = 'inline-block';
+  menu.classList.add('open');
+  menuBtn.classList.add('hidden');
+  closeBtn.classList.remove('hidden');
 });
 
 // close sidebar
 closeBtn.addEventListener('click', () => {
-  menu.style.display = 'none';
-  closeBtn.style.display = 'none';
-  menuBtn.style.display = 'inline-block';
+  menu.classList.remove('open');
+  menuBtn.classList.remove('hidden');
+  closeBtn.classList.add('hidden');
 });
 
 // close sidebar on clicking outside
 document.addEventListener('click', (event) => {
   if (!menu.contains(event.target) && !menuBtn.contains(event.target) && !closeBtn.contains(event.target)) {
-    menu.style.display = 'none';
-    closeBtn.style.display = 'none';
-    menuBtn.style.display = 'inline-block';
+    menu.classList.remove('open');
+    closeBtn.classList.add('hidden');
+    menuBtn.classList.remove('hidden');
+  }
+});
+
+// Adjust menu visibility on resize
+window.addEventListener('resize', () => {
+  if (!isMobile()) {
+    menu.classList.remove('open');
+    closeBtn.classList.add('hidden');
+    menuBtn.classList.remove('hidden');
   }
 });
 
@@ -67,8 +79,3 @@ faqs.forEach(faq => {
 window.addEventListener("scroll", () => {
   document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
 });
-
-
-
-
-
