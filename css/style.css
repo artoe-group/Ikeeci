@@ -1039,6 +1039,10 @@ footer .copyright {
   nav .container ul li {
     margin: 1rem 0;
   }
+
+  section#cta .container {
+    display: none;
+  }
 }
 
 
