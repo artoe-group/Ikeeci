@@ -7,7 +7,7 @@
   --color-light: rgba(255, 255, 255, 0.8);
   --width: 84%;
   --mobile-width: 90%;
-  --color-artoe: #f01a65;
+  --color-artoe: #ff036d;
 }
 
 * {
@@ -414,7 +414,7 @@ section#faqs a.btn {
 
 /* =============================== CTA ============================== */
 section#cta .container {
-  background: rgba(0, 0, 0, 0.425);
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1044,5 +1044,4 @@ footer .copyright {
     display: none;
   }
 }
-
 
