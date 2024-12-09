@@ -1017,12 +1017,25 @@ footer .copyright {
     right: 0;
     height: 100%;
     width: 70%;
+    background: white;
     background-color: var(--color-white);
     flex-direction: column;
     padding: 2rem;
     z-index: 1000;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
   }
+  
+  nav ul li {
+    background-color: #fff;
+  }
+
+  nav ul{
+    background-color: white;
+  }
+
+  nav ul li a {
+    background-color: white;
+    color: black;
+}
 
   nav .container ul.open {
     display: flex;
