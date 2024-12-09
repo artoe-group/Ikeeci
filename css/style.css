@@ -57,6 +57,12 @@ h5 {
   font-weight: 600;
 }
 
+h7 {
+  color: #fff;
+  font-weight: 1000;
+  font-size: 3rem;
+}
+
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 8rem;
