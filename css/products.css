@@ -1,11 +1,4 @@
-body{
-    margin: 0;
-    font-family: Poppins;
-}
-a{
-    color: unset;
-    text-decoration: none;
-}
+
 .container{
     width: 900px;
     margin: auto;
