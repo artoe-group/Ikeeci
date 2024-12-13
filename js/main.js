@@ -58,6 +58,8 @@ navItems.forEach(item => {
   });
 });
 
+
+
 // show/hide FAQs
 const faqs = document.querySelectorAll('section#faqs article');
 
