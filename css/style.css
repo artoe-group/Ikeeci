@@ -726,9 +726,9 @@ footer .copyright {
   }
 
   /* ==================== NAVBAR ===================== */
-  nav .container .icons {
+  /* nav .container .icons {
     gap: 1rem;
-  }
+  } */
 
   /* ==================== HEADER ===================== */
   header .container {
@@ -1020,7 +1020,7 @@ footer .copyright {
     background: white;
     background-color: var(--color-white);
     flex-direction: column;
-    padding: 2rem;
+    /* padding: 2rem; */
     z-index: 1000;
   }
   
