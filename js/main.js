@@ -76,3 +76,4 @@ faqs.forEach(faq => {
     }
   });
 });
+

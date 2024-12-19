@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Shoe</title>
+  <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="column-left">
+      <h2>Empty Canvas</h2>
+      <img id="shoe-image" src="/images/white-shoe.png" alt="White Shoe">
+    </div>
+
+    <div class="column-right">
+      <h2>Make Your Own</h2>
+      <form id="customize-form" action="POST" enctype="multipart/form-data">
+        <label for="upload-image">Upload Image:</label>
+        <input type="file" id="upload-image" name="image" accept="image/*">
+        
+        <label for="prompt">Enter Prompt:</label>
+        <input type="text" id="prompt" name="prompt" placeholder="Describe your custom shoe design...">
+        
+        <label for="size">Shoe Size UK:</label>
+        <input type="number" id="size" name="size" placeholder="Enter size">
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Result Section -->
+  <div id="result-overlay" class="hidden">
+    <div class="result-container">
+      <h3>AI Generated Shoe</h3>
+      <img id="result-image" src="" alt="Generated Shoe">
+      <p id="generated-name"></p>
+      <p>If you are satisfied with your creation, you can add this shoe to your bag and checkout.</p>
+      <button id="add-to-bag">Add To Bag</button>
+    </div>
+  </div>
+
+  <script src="/js/create.js"></script>
+</body>
+</html>

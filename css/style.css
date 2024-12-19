@@ -602,8 +602,8 @@ footer .copyright {
     flex-direction: column;
     width: 16rem;
     height: 100vh;
-    background: var(--color-primary);
-    box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.2);
+    background: white;
+    box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.04);
     z-index: 3;
     display: none;
   }
@@ -725,10 +725,7 @@ footer .copyright {
     padding-top: 8rem;
   }
 
-  /* ==================== NAVBAR ===================== */
-  /* nav .container .icons {
-    gap: 1rem;
-  } */
+
 
   /* ==================== HEADER ===================== */
   header .container {
@@ -1020,24 +1017,27 @@ footer .copyright {
     background: white;
     background-color: var(--color-white);
     flex-direction: column;
-    /* padding: 2rem; */
     z-index: 1000;
   }
   
   nav ul li {
+    background: white;
     background-color: #fff;
   }
 
   nav ul{
+    background: white;
     background-color: white;
   }
 
   nav ul li a {
+    background: white;
     background-color: white;
     color: black;
 }
 
   nav .container ul.open {
+    background: white;
     display: flex;
   }
 
@@ -1054,7 +1054,7 @@ footer .copyright {
   }
 
   nav .container ul li {
-    margin: 1rem 0;
+    background-color: #fff;
   }
 
   section#cta .container {
