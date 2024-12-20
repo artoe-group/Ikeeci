@@ -55,6 +55,13 @@
         </div>
     </header>
 
+
+    <section id="gallery">
+        <img src="/slides/image1.jpg" alt="Gallery Image 1" class="active">
+        <img src="/slides/image3.jpg" alt="Gallery Image 2">
+        <img src="/slides/image2.jpg" alt="Gallery Image 3">
+    </section>
+
     <section id="products">
         <div class="container">
             <H2>Our Customized Products</H2>
@@ -216,6 +223,23 @@
         
     <!-- JS CDN -->
     <script src="/js/main.js"></script>
+
+    <script>
+        // Mobile slideshow functionality
+        const images = document.querySelectorAll("#gallery img");
+        let currentImage = 0;
+
+        function switchImage() {
+            images[currentImage].classList.remove("active");
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].classList.add("active");
+        }
+
+        // Change image every 10 seconds
+        if (window.innerWidth <= 768) {
+            setInterval(switchImage, 10000);
+        }
+    </script>
 
 </body>
 </html>
